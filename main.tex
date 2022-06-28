@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{textcomp}       % símbolo +- \pm -+ \mp
+\usepackage{subfig}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{color}
+\definecolor{verde}{rgb}{0,0.6,0}
+\usepackage{array}
+\usepackage{multirow}
+
+%Esto es para poner figuras en formato de 2 columnas
+%\newenvironment{Figura}
+%  {\par\medskip\noindent\minipage{\linewidth}}
+%  {\endminipage\par\medskip}
+  
+\geometry{
+ a4paper,
+ left=15mm,
+ right=10mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\begin{document}
+	
+	\include{Secciones/caratula}
+    
+    \tableofcontents
+    \thispagestyle{empty}
+    \setcounter{page}{1}
+    \newpage
+
+%Con \include las secciones se ponen en paginas distinas, con \input van contiguas
+
+%    \begin{multicols}{2}
+        \include{Secciones/Introducción}
+        \include{Secciones/Marco_Teorico}
+        \include{Secciones/S1}
+        \include{Secciones/S2}
+        \include{Secciones/S3}
+        \include{Secciones/S4}
+        \include{Secciones/S5}
+        \include{Secciones/Conclusiones}
+%    \end{multicols}
+	
+	\nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{references}
+\end{document}
